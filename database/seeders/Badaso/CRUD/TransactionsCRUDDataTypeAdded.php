@@ -31,7 +31,7 @@ class TransactionsCRUDDataTypeAdded extends Seeder
                 'name' => 'transactions',
                 'slug' => 'transactions',
                 'display_name_singular' => 'Data Transaksi',
-                'display_name_plural' => 'Daftar Data Transaksi',
+                'display_name_plural' => 'DAftar DAta Transaksi',
                 'icon' => NULL,
                 'model_name' => NULL,
                 'policy_name' => NULL,
@@ -45,9 +45,9 @@ class TransactionsCRUDDataTypeAdded extends Seeder
                 'details' => NULL,
                 'notification' => '[]',
                 'is_soft_delete' => false,
-                'updated_at' => '2023-04-16T13:52:22.000000Z',
-                'created_at' => '2023-04-16T13:52:22.000000Z',
-                'id' => 5,
+                'updated_at' => '2023-04-16T15:11:16.000000Z',
+                'created_at' => '2023-04-16T15:11:16.000000Z',
+                'id' => 7,
             ));
 
             Badaso::model('Permission')->generateFor('transactions');
@@ -63,7 +63,7 @@ class TransactionsCRUDDataTypeAdded extends Seeder
 
             if (!is_null($menu_item)) {
                 $menu_item->fill([
-                    'title' => 'Daftar Data Transaksi',
+                    'title' => 'DAftar DAta Transaksi',
                     'target' => '_self',
                     'icon_class' => '',
                     'color' => null,
@@ -75,7 +75,7 @@ class TransactionsCRUDDataTypeAdded extends Seeder
                 $menu_item = new MenuItem();
                 $menu_item->menu_id = $menu->id;
                 $menu_item->url = '/general/transactions';
-                $menu_item->title = 'Daftar Data Transaksi';
+                $menu_item->title = 'DAftar DAta Transaksi';
                 $menu_item->target = '_self';
                 $menu_item->icon_class = '';
                 $menu_item->color = null;

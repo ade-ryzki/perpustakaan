@@ -28,11 +28,10 @@ class BooksCRUDDataTypeAdded extends Seeder
             }
 
             \DB::table('badaso_data_types')->insert(array (
-                'id' => 4,
                 'name' => 'books',
                 'slug' => 'books',
                 'display_name_singular' => 'Data Buku',
-                'display_name_plural' => 'Daftar Buku',
+                'display_name_plural' => 'Daftar Data Buku',
                 'icon' => NULL,
                 'model_name' => NULL,
                 'policy_name' => NULL,
@@ -42,13 +41,13 @@ class BooksCRUDDataTypeAdded extends Seeder
                 'order_direction' => NULL,
                 'generate_permissions' => true,
                 'server_side' => false,
-                'is_maintenance' => 0,
                 'description' => NULL,
                 'details' => NULL,
                 'notification' => '[]',
                 'is_soft_delete' => false,
-                'created_at' => '2023-04-16T09:39:41.000000Z',
-                'updated_at' => '2023-04-16T09:40:56.000000Z',
+                'updated_at' => '2023-04-16T14:58:23.000000Z',
+                'created_at' => '2023-04-16T14:58:23.000000Z',
+                'id' => 6,
             ));
 
             Badaso::model('Permission')->generateFor('books');
@@ -64,7 +63,7 @@ class BooksCRUDDataTypeAdded extends Seeder
 
             if (!is_null($menu_item)) {
                 $menu_item->fill([
-                    'title' => 'Daftar Buku',
+                    'title' => 'Daftar Data Buku',
                     'target' => '_self',
                     'icon_class' => '',
                     'color' => null,
@@ -76,7 +75,7 @@ class BooksCRUDDataTypeAdded extends Seeder
                 $menu_item = new MenuItem();
                 $menu_item->menu_id = $menu->id;
                 $menu_item->url = '/general/books';
-                $menu_item->title = 'Daftar Buku';
+                $menu_item->title = 'Daftar Data Buku';
                 $menu_item->target = '_self';
                 $menu_item->icon_class = '';
                 $menu_item->color = null;

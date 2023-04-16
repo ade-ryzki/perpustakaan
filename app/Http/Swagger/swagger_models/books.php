@@ -58,7 +58,7 @@
   *                 @OA\Property(
   *                     property="data",
   *                     type="object",
-  *                     example={"title":"Abc", "cover":"Abc", "categoryId":"", "author":"Abc", "publisherId":"", "bookshelfsId":"", "stock":"123"},
+  *                     example={"title":"Abc", "cover":"Abc", "categoryId":"", "author":"Abc", "publisherId":"", "bookshelfsId":"", "stock":"123", "loanAmmount":"123"},
   *                 ),
   *             )
   *         )
@@ -88,7 +88,7 @@
   *                 @OA\Property(
   *                     property="data",
   *                     type="object",
-  *                     example={"title":"Abc", "cover":"Abc", "categoryId":"", "author":"Abc", "publisherId":"", "bookshelfsId":"", "stock":"123"},
+  *                     example={"title":"Abc", "cover":"Abc", "categoryId":"", "author":"Abc", "publisherId":"", "bookshelfsId":"", "stock":"123", "loanAmmount":"123"},
   *                ),
   *             )
   *         )
@@ -201,7 +201,7 @@
   *                 @OA\Property(
   *                     property="data",
   *                     type="array",
-  *                     example={{"id":"123", "title":"Abc", "cover":"Abc", "categoryId":"", "author":"Abc", "publisherId":"", "bookshelfsId":"", "stock":"123", "createdAt":"2021-01-01T00:00:00.000Z", "updatedAt":"2021-01-01T00:00:00.000Z"}, {"id":"123", "title":"Abc", "cover":"Abc", "categoryId":"", "author":"Abc", "publisherId":"", "bookshelfsId":"", "stock":"123", "createdAt":"2021-01-01T00:00:00.000Z", "updatedAt":"2021-01-01T00:00:00.000Z"}},
+  *                     example={{"id":"123", "title":"Abc", "cover":"Abc", "categoryId":"", "author":"Abc", "publisherId":"", "bookshelfsId":"", "stock":"123", "loanAmmount":"123", "createdAt":"2021-01-01T00:00:00.000Z", "updatedAt":"2021-01-01T00:00:00.000Z"}, {"id":"123", "title":"Abc", "cover":"Abc", "categoryId":"", "author":"Abc", "publisherId":"", "bookshelfsId":"", "stock":"123", "loanAmmount":"123", "createdAt":"2021-01-01T00:00:00.000Z", "updatedAt":"2021-01-01T00:00:00.000Z"}},
   *                     @OA\Items(
   *                         type="object",
   *                         @OA\Property(type="integer", property="id"), 
@@ -212,6 +212,7 @@
   *                         @OA\Property(type="string", property="publisherId"), 
   *                         @OA\Property(type="string", property="bookshelfsId"), 
   *                         @OA\Property(type="integer", property="stock"), 
+  *                         @OA\Property(type="integer", property="loanAmmount"), 
   *                         @OA\Property(type="string", property="createdAt"), 
   *                         @OA\Property(type="string", property="updatedAt"),
   *                     ),

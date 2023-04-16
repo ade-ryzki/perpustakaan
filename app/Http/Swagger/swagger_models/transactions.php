@@ -58,7 +58,7 @@
   *                 @OA\Property(
   *                     property="data",
   *                     type="object",
-  *                     example={"userId":"", "bookId":"", "borrowDate":"Abc", "returnDate":"Abc"},
+  *                     example={"userId":"", "bookId":"", "borrowDate":"Abc", "returnDate":"Abc", "operations":"Abc"},
   *                 ),
   *             )
   *         )
@@ -88,7 +88,7 @@
   *                 @OA\Property(
   *                     property="data",
   *                     type="object",
-  *                     example={"userId":"", "bookId":"", "borrowDate":"Abc", "returnDate":"Abc"},
+  *                     example={"userId":"", "bookId":"", "borrowDate":"Abc", "returnDate":"Abc", "operations":"Abc"},
   *                ),
   *             )
   *         )
@@ -201,7 +201,7 @@
   *                 @OA\Property(
   *                     property="data",
   *                     type="array",
-  *                     example={{"id":"123", "userId":"", "bookId":"", "borrowDate":"Abc", "returnDate":"Abc", "createdAt":"2021-01-01T00:00:00.000Z", "updatedAt":"2021-01-01T00:00:00.000Z"}, {"id":"123", "userId":"", "bookId":"", "borrowDate":"Abc", "returnDate":"Abc", "createdAt":"2021-01-01T00:00:00.000Z", "updatedAt":"2021-01-01T00:00:00.000Z"}},
+  *                     example={{"id":"123", "userId":"", "bookId":"", "borrowDate":"Abc", "returnDate":"Abc", "operations":"Abc", "createdAt":"2021-01-01T00:00:00.000Z", "updatedAt":"2021-01-01T00:00:00.000Z"}, {"id":"123", "userId":"", "bookId":"", "borrowDate":"Abc", "returnDate":"Abc", "operations":"Abc", "createdAt":"2021-01-01T00:00:00.000Z", "updatedAt":"2021-01-01T00:00:00.000Z"}},
   *                     @OA\Items(
   *                         type="object",
   *                         @OA\Property(type="integer", property="id"), 
@@ -209,6 +209,7 @@
   *                         @OA\Property(type="string", property="bookId"), 
   *                         @OA\Property(type="string", property="borrowDate"), 
   *                         @OA\Property(type="string", property="returnDate"), 
+  *                         @OA\Property(type="string", property="operations"), 
   *                         @OA\Property(type="string", property="createdAt"), 
   *                         @OA\Property(type="string", property="updatedAt"),
   *                     ),

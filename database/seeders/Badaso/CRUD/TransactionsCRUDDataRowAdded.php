@@ -44,7 +44,7 @@ class TransactionsCRUDDataRowAdded extends Seeder
                     'data_type_id' => $data_type->id,
                     'field' => 'user_id',
                     'type' => 'relation',
-                    'display_name' => 'Nama Anggota',
+                    'display_name' => 'Nama Karyawan',
                     'required' => 1,
                     'browse' => 1,
                     'read' => 1,
@@ -68,7 +68,7 @@ class TransactionsCRUDDataRowAdded extends Seeder
                     'add' => 1,
                     'delete' => 1,
                     'details' => '{}',
-                    'relation' => '{"destination_table":"books","destination_table_column":"id","destination_table_display_column":"title","destination_table_display_more_column":["id","title"]}',
+                    'relation' => '{"relation_type":"belongs_to","destination_table":"books","destination_table_column":"id","destination_table_display_column":"title","destination_table_display_more_column":["id","title"]}',
                     'order' => 3,
                 ),
                 3 => 
@@ -92,7 +92,7 @@ class TransactionsCRUDDataRowAdded extends Seeder
                     'data_type_id' => $data_type->id,
                     'field' => 'return_date',
                     'type' => 'date',
-                    'display_name' => 'Tanggal Kembalian',
+                    'display_name' => 'Tanggal PEngembalian',
                     'required' => 1,
                     'browse' => 1,
                     'read' => 1,
@@ -106,6 +106,33 @@ class TransactionsCRUDDataRowAdded extends Seeder
                 5 => 
                 array (
                     'data_type_id' => $data_type->id,
+                    'field' => 'operations',
+                    'type' => 'hidden',
+                    'display_name' => 'Status',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{"item":[
+{
+"label": "Dipinjam",
+"value": "dipinjam"
+}
+
+{
+"label": "Dikembalikan",
+"value": "dikembalikan"
+}
+]
+}',
+                    'relation' => NULL,
+                    'order' => 6,
+                ),
+                6 => 
+                array (
+                    'data_type_id' => $data_type->id,
                     'field' => 'created_at',
                     'type' => 'datetime',
                     'display_name' => 'Created At',
@@ -117,9 +144,9 @@ class TransactionsCRUDDataRowAdded extends Seeder
                     'delete' => 0,
                     'details' => '{}',
                     'relation' => NULL,
-                    'order' => 6,
+                    'order' => 7,
                 ),
-                6 => 
+                7 => 
                 array (
                     'data_type_id' => $data_type->id,
                     'field' => 'updated_at',
@@ -133,7 +160,7 @@ class TransactionsCRUDDataRowAdded extends Seeder
                     'delete' => 0,
                     'details' => '{}',
                     'relation' => NULL,
-                    'order' => 7,
+                    'order' => 8,
                 ),
             ));
 

@@ -59,7 +59,7 @@ class BooksCRUDDataRowAdded extends Seeder
                 array (
                     'data_type_id' => $data_type->id,
                     'field' => 'cover',
-                    'type' => 'upload_image',
+                    'type' => 'text',
                     'display_name' => 'Sampul',
                     'required' => 1,
                     'browse' => 1,
@@ -140,7 +140,7 @@ class BooksCRUDDataRowAdded extends Seeder
                     'data_type_id' => $data_type->id,
                     'field' => 'stock',
                     'type' => 'number',
-                    'display_name' => 'Jumlah',
+                    'display_name' => 'Stock',
                     'required' => 1,
                     'browse' => 1,
                     'read' => 1,
@@ -154,6 +154,22 @@ class BooksCRUDDataRowAdded extends Seeder
                 8 => 
                 array (
                     'data_type_id' => $data_type->id,
+                    'field' => 'loan_ammount',
+                    'type' => 'number',
+                    'display_name' => 'Jumlah Terpinjam',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'relation' => NULL,
+                    'order' => 9,
+                ),
+                9 => 
+                array (
+                    'data_type_id' => $data_type->id,
                     'field' => 'created_at',
                     'type' => 'datetime',
                     'display_name' => 'Created At',
@@ -165,9 +181,9 @@ class BooksCRUDDataRowAdded extends Seeder
                     'delete' => 0,
                     'details' => '{}',
                     'relation' => NULL,
-                    'order' => 9,
+                    'order' => 10,
                 ),
-                9 => 
+                10 => 
                 array (
                     'data_type_id' => $data_type->id,
                     'field' => 'updated_at',
@@ -181,7 +197,7 @@ class BooksCRUDDataRowAdded extends Seeder
                     'delete' => 0,
                     'details' => '{}',
                     'relation' => NULL,
-                    'order' => 10,
+                    'order' => 11,
                 ),
             ));
 

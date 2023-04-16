@@ -24,6 +24,12 @@ class BadasoDeploymentOrchestratorSeeder extends Seeder
         $this->seed(PublishersCRUDDataRowAdded::class);
         $this->seed(BookhelvesCRUDDataTypeAdded::class);
         $this->seed(BookhelvesCRUDDataRowAdded::class);
+        
+        
+        
+        
+        $this->seed(TransactionsCRUDDataDeleted::class);
+        $this->seed(BooksCRUDDataDeleted::class);
         $this->seed(BooksCRUDDataTypeAdded::class);
         $this->seed(BooksCRUDDataRowAdded::class);
         $this->seed(TransactionsCRUDDataTypeAdded::class);
