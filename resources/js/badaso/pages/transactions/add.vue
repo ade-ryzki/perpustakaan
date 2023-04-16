@@ -312,6 +312,27 @@
                       errors[$caseConvert.stringSnakeToCamel(dataRow.field)]
                     "
                   ></badaso-select>
+                                    <badaso-select
+                    v-if="
+                      dataRow.type == 'relation_readonly' &&
+                      dataRow.relation.relationType == 'belongs_to'
+                    "
+                    :label="dataRow.displayName"
+                    :placeholder="dataRow.displayName"
+                    v-model="dataRow.value"
+                    size="12"
+                    :style = "'pointer-event:none;'"
+                    :items="
+                      relationData[
+                        $caseConvert.stringSnakeToCamel(
+                          dataRow.relation.destinationTable
+                        )
+                      ]
+                    "
+                    :alert="
+                      errors[$caseConvert.stringSnakeToCamel(dataRow.field)]
+                    "
+                  ></badaso-select>
                   <badaso-select-multiple
                     v-if="
                       dataRow.type == 'relation' &&
@@ -482,6 +503,16 @@ export default {
         const response = await this.$api.badasoCrud.readBySlug({
           slug: this.$route.params.slug,
         });
+        console.log(response)
+        const response_user = await this.$api.badasoAuthUser.user({});
+        console.log(response_user)
+        let isAdmin = false;
+          for(let role of response_user.data.user.role){
+            if(role.name == "administrator"){
+              isAdmin = true;
+              break;
+            }
+          }
 
         this.$closeLoader();
         this.dataType = response.data.crudData;
@@ -509,6 +540,14 @@ export default {
           } else if (data.value == undefined) {
             data.value = "";
           }
+
+          if(data.field == "user_id"){
+            if(!isAdmin){
+              data.value = response_user.data.user.id;
+              data.type = 'relation_readonly';
+            }
+          }
+
           try {
             data.details = JSON.parse(data.details);
             if (data.type == "hidden") {
